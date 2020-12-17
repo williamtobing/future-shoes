@@ -12,7 +12,7 @@ class Footer extends React.Component {
           <p>Copyright &copy; 2020. All Right Reserved</p>
           <div className="social">
             {classList.map((name) => {
-              return <i className={`${name.fab}`}></i>;
+              return <i key={name.connect} className={`${name.fab}`}></i>;
             })}
           </div>
         </div>

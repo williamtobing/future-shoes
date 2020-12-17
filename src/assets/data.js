@@ -119,15 +119,19 @@ export const contentList = [
 
 export const classList = [
   {
+    connect: "twitter",
     fab: "fab fa-twitter",
   },
   {
-    fab: "fab fa-twitter",
+    connect: "facebook",
+    fab: "fab fa-facebook",
   },
   {
+    connect: "instagram",
     fab: "fab fa-instagram",
   },
   {
+    connect: "linkedin",
     fab: "fab fa-linkedin",
   },
 ];

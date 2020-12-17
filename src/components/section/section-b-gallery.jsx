@@ -18,7 +18,7 @@ class SectionGallery extends React.Component {
           <div className="items">
             {itemList.map((item) => {
               return (
-                <div className="item">
+                <div key={item.productName} className="item">
                   <div className="item-image">
                     <img src={item.image} alt="" />
                   </div>

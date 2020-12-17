@@ -12,7 +12,7 @@ class SectionContactD extends React.Component {
           <div className="contact-info">
             {contentList.map((content) => {
               return (
-                <div>
+                <div key={content.contact}>
                   <i className={`${content.fas}`}></i>
                   <h3>{content.contact}</h3>
                   <p>{content.detail}</p>
