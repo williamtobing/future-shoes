@@ -82,9 +82,18 @@ img {
     color: #fff;
 
     // Header Content
+    @media (min-width: 800px) {
+      position: relative;
+
+      .header-content {
+        position: absolute;
+        bottom: 4.5rem;
+        right: 4.5rem;
+      }
+    }
+
     .header-content {
       text-align: right;
-      padding-top: 40%;
 
       .header-txt {
         font-weight: bold;
