@@ -42,6 +42,11 @@ input[class^="btn-"]:hover {
   color: #333;
 }
 
+button[class^="btn-"]:hover {
+  color: #333;
+  background-color: $main-color;
+}
+
 // Backgrounds
 .bg {
   &-main {
