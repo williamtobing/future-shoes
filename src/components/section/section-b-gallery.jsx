@@ -12,10 +12,8 @@ class SectionGallery extends React.Component {
           <h2 className="section-title">Our Articles</h2>
           <div className="bottom-line"></div>
           <p className="lead">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae harum
-            itaque veritatis! Non molestias repudiandae unde quasi quos,
-            quibusdam enim corrupti corporis, beatae officia doloremque fuga
-            consequatur nostrum harum blanditiis.
+            We have completed our best articles. We're always learning and
+            getting better with each release of our articles.
           </p>
           <div className="items">
             {itemList.map((item) => {
