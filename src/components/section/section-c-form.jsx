@@ -21,7 +21,9 @@ class SectionForm extends React.Component {
       checkForm = (
         <section id="contact-a" className="text-center py-3">
           <div className="container">
-            <h2 className="section-title">Terkirim</h2>
+            <h2 style={{ margin: "235px 0 220px 0" }} className="section-title">
+              Terkirim
+            </h2>
           </div>
         </section>
       );
