@@ -11,13 +11,14 @@
   padding: 0.8rem 2rem;
   transition: all 0.5s;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .btn {
   &-main {
     @extend %btn-shared;
-    color: #333;
+    color: #f4f4f4;
     background-color: $main-color;
   }
 
@@ -37,7 +38,8 @@
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
-  background-color: $main-color;
+  background-color: $light-color;
+  color: #333;
 }
 
 // Backgrounds

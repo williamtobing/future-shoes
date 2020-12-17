@@ -83,12 +83,23 @@ img {
 
     // Header Content
     .header-content {
-      text-align: center;
-      padding-top: 20%;
+      text-align: right;
+      padding-top: 40%;
+
+      .header-txt {
+        font-weight: bold;
+        font-style: italic;
+        text-shadow: 1px 1px 2px #000000;
+      }
 
       h1 {
         font-size: 4rem;
         line-height: 1.2;
+      }
+
+      a {
+        font-weight: bold;
+        text-shadow: 1px 1px 1px $dark-color;
       }
     }
   }

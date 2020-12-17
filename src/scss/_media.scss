@@ -4,7 +4,32 @@
     height: 30rem;
 
     .header-content {
-      padding-top: 5rem;
+      padding-top: 17rem;
+
+      .lead {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+  #about {
+    &-a {
+      .about-info {
+        grid-template-areas:
+          "bioimage"
+          "bio"
+          "aw1"
+          "aw2"
+          "aw3";
+      }
+    }
+
+    &-c {
+      display: none;
     }
   }
 }
@@ -27,7 +52,17 @@
       background-position: 20% 30%;
 
       .header-content {
-        display: none;
+        padding-top: 3rem;
+        text-align: center;
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        a,
+        p {
+          display: none;
+        }
       }
     }
 
@@ -72,11 +107,11 @@
     &-a {
       .about-info {
         grid-template-areas:
-          'bioimage'
-          'bio'
-          'aw1'
-          'aw2'
-          'aw3';
+          "bioimage"
+          "bio"
+          "aw1"
+          "aw2"
+          "aw3";
       }
     }
 
@@ -90,11 +125,11 @@
     &-a {
       .text-fields {
         grid-template-areas:
-          'name'
-          'subject'
-          'email'
-          'phone'
-          'message';
+          "name"
+          "subject"
+          "email"
+          "phone"
+          "message";
       }
     }
 
