@@ -1,5 +1,8 @@
 import React from "react";
 
+import axios from "axios";
+// import Select from "react-select";
+
 import "../../scss/main.scss";
 
 class SectionForm extends React.Component {
@@ -8,7 +11,19 @@ class SectionForm extends React.Component {
 
     this.state = {
       isSubmitted: false,
+      data: [],
+      origin: [],
     };
+  }
+  componentDidMount() {
+    axios
+      .get("https://rajaongkir-fshoes.herokuapp.com/city")
+      .then((response) => {
+        const city = response.data.data;
+        this.setState({ data: city });
+        // this.setState({ origin: })
+        // console.log(this.state.data);
+      });
   }
 
   handleSubmit() {
@@ -17,6 +32,10 @@ class SectionForm extends React.Component {
 
   render() {
     let checkForm;
+    const cities = this.state.data;
+    // const options = cities.map((city) => {
+    //   return city.city_name;
+    // });
     if (this.state.isSubmitted) {
       checkForm = (
         <section id="contact-a" className="text-center py-3">
@@ -46,12 +65,18 @@ class SectionForm extends React.Component {
                   placeholder="Name"
                   name="name"
                 />
-                <input
+                {/* <input
                   type="text"
                   className="text-input subject-input"
                   placeholder="City"
                   name="subject"
-                />
+                /> */}
+                <select className="text-input subject-input" name="subject">
+                  <option key="0">City</option>
+                  {cities.map((item) => {
+                    return <option key={item.city_id}>{item.city_name}</option>;
+                  })}
+                </select>
                 <input
                   type="email"
                   className="text-input email-input"
