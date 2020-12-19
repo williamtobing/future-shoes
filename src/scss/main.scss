@@ -348,7 +348,6 @@ img {
 #contact {
   &-a {
     .text-fields {
-      font-family: "Dosis", sans-serif;
       display: grid;
       grid-template-areas:
         "name email"
@@ -375,15 +374,18 @@ img {
       }
 
       .text-input {
+        font-family: "Dosis", sans-serif;
         padding: 0.5rem 1rem;
         background-color: hsl(0, 0%, 100%);
         border-radius: 4px;
         border: 1px solid hsl(0, 0%, 80%);
-        font-family: "Dosis", sans-serif;
       }
     }
 
     button[type="submit"] {
+      font-family: "Dosis", sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
       width: 50%;
       margin-top: 1.2rem;
     }
