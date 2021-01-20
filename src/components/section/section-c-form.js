@@ -2,6 +2,7 @@ import React from "react";
 
 import axios from "axios";
 import Select from "react-select";
+import Fade from "react-reveal/Fade";
 
 import "../../scss/main.scss";
 
@@ -102,15 +103,17 @@ class SectionForm extends React.Component {
     return (
       <section id="contact-a" className="text-center py-3">
         <div className="container">
-          <h2 className="section-title">Try Our Product</h2>
-          <div className="bottom-line"></div>
-          <p className="lead">Feel free to fill the form below</p>
+          <Fade bottom>
+            <h2 className="section-title">Try Our Product</h2>
+            <div className="bottom-line"></div>
+            <p className="lead">Feel free to fill the form below</p>
 
-          {error && <h3 style={{ color: "red" }}>{error}</h3>}
+            {error && <h3 style={{ color: "red" }}>{error}</h3>}
+          </Fade>
 
           <>
             {cekOngkirResults.length > 0 ? (
-              <>
+              <Fade bottom>
                 <div style={{ textTransform: "none" }}>
                   <h4 style={{ textTransform: "capitalize" }}>
                     Name: {formInfo.name}
@@ -164,74 +167,82 @@ class SectionForm extends React.Component {
                     </tbody>
                   </table>
                 </div>
-              </>
+              </Fade>
             ) : (
-              <form onSubmit={this.handleSubmit}>
-                <div className="text-fields">
-                  <input
-                    type="text"
-                    className="text-input name-input"
-                    placeholder="Name"
-                    autoComplete="off"
-                    name="name"
-                    value={formInfo.name}
-                    onChange={(e) =>
-                      this.setState({
-                        formInfo: { ...formInfo, name: e.target.value },
-                      })
-                    }
-                  />
+              <Fade bottom>
+                <form onSubmit={this.handleSubmit}>
+                  <div className="text-fields">
+                    <input
+                      type="text"
+                      className="text-input name-input"
+                      placeholder="Name"
+                      autoComplete="off"
+                      name="name"
+                      value={formInfo.name}
+                      onChange={(e) =>
+                        this.setState({
+                          formInfo: { ...formInfo, name: e.target.value },
+                        })
+                      }
+                    />
 
-                  <Select
-                    value={destination}
-                    onChange={this.handleChangeDestination}
-                    options={options}
-                    placeholder="City"
-                  />
+                    <Select
+                      value={destination}
+                      onChange={this.handleChangeDestination}
+                      options={options}
+                      placeholder="City"
+                    />
 
-                  <input
-                    type="email"
-                    className="text-input email-input"
-                    autoComplete="off"
-                    placeholder="Email"
-                    name="email"
-                    value={formInfo.email}
-                    onChange={(e) =>
-                      this.setState({
-                        formInfo: { ...formInfo, email: e.target.value },
-                      })
-                    }
-                  />
-                  <input
-                    type="text"
-                    className="text-input phone-input"
-                    autoComplete="off"
-                    placeholder="Phone Number"
-                    name="phoneNumber"
-                    value={formInfo.phoneNumber}
-                    onChange={(e) =>
-                      this.setState({
-                        formInfo: { ...formInfo, phoneNumber: e.target.value },
-                      })
-                    }
-                  />
-                  <textarea
-                    className="text-input message-input"
-                    placeholder="Enter your full address"
-                    autoComplete="off"
-                    name="fullAddress"
-                    value={formInfo.fullAddress}
-                    onChange={(e) =>
-                      this.setState({
-                        formInfo: { ...formInfo, fullAddress: e.target.value },
-                      })
-                    }
-                  ></textarea>
-                </div>
-                <button type="submit" className="btn-dark">
-                  Submit
-                </button>
-              </form>
+                    <input
+                      type="email"
+                      className="text-input email-input"
+                      autoComplete="off"
+                      placeholder="Email"
+                      name="email"
+                      value={formInfo.email}
+                      onChange={(e) =>
+                        this.setState({
+                          formInfo: { ...formInfo, email: e.target.value },
+                        })
+                      }
+                    />
+                    <input
+                      type="text"
+                      className="text-input phone-input"
+                      autoComplete="off"
+                      placeholder="Phone Number"
+                      name="phoneNumber"
+                      value={formInfo.phoneNumber}
+                      onChange={(e) =>
+                        this.setState({
+                          formInfo: {
+                            ...formInfo,
+                            phoneNumber: e.target.value,
+                          },
+                        })
+                      }
+                    />
+                    <textarea
+                      className="text-input message-input"
+                      placeholder="Enter your full address"
+                      autoComplete="off"
+                      name="fullAddress"
+                      value={formInfo.fullAddress}
+                      onChange={(e) =>
+                        this.setState({
+                          formInfo: {
+                            ...formInfo,
+                            fullAddress: e.target.value,
+                          },
+                        })
+                      }
+                    ></textarea>
+                  </div>
+                  <button type="submit" className="btn-dark">
+                    Submit
+                  </button>
+                </form>
+              </Fade>
             )}
           </>
         </div>

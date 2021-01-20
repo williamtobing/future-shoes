@@ -1,5 +1,7 @@
 import React from "react";
 
+import Fade from "react-reveal/Fade";
+
 import { classList } from "../assets/data";
 
 import "../scss/main.scss";
@@ -9,12 +11,14 @@ class Footer extends React.Component {
     return (
       <footer id="main-footer">
         <div className="footer-content container">
-          <p>Copyright &copy; 2020. All Right Reserved</p>
-          <div className="social">
-            {classList.map((name) => {
-              return <i key={name.connect} className={`${name.fab}`}></i>;
-            })}
-          </div>
+          <Fade bottom>
+            <p>Copyright &copy; 2020. All Right Reserved</p>
+            <div className="social">
+              {classList.map((name) => {
+                return <i key={name.connect} className={`${name.fab}`}></i>;
+              })}
+            </div>
+          </Fade>
         </div>
       </footer>
     );

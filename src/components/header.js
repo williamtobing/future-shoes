@@ -1,5 +1,7 @@
 import React from "react";
 
+import Swing from "react-reveal/Swing";
+
 import "../scss/main.scss";
 
 const Header = () => (
@@ -20,9 +22,11 @@ const Header = () => (
             forward.
           </p>
         </div>
-        <a className="btn-main" href="#gallery">
-          View Our Articles
-        </a>
+        <Swing>
+          <a className="btn-main" href="#gallery">
+            View Our Articles
+          </a>
+        </Swing>
       </div>
     </div>
   </header>
