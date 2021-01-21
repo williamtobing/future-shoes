@@ -1,12 +1,12 @@
-import Item1 from "./items/item1.jpg";
-import Item2 from "./items/item2.jpg";
-import Item3 from "./items/item3.jpg";
-import Item4 from "./items/item4.jpg";
-import Item5 from "./items/item5.jpg";
-import Item6 from "./items/item6.jpg";
-import Item7 from "./items/item7.jpg";
-import Item8 from "./items/item8.jpg";
-import Item9 from "./items/item9.jpg";
+import Item1 from "./items/item1.webp";
+import Item2 from "./items/item2.webp";
+import Item3 from "./items/item3.webp";
+import Item4 from "./items/item4.webp";
+import Item5 from "./items/item5.webp";
+import Item6 from "./items/item6.webp";
+import Item7 from "./items/item7.webp";
+import Item8 from "./items/item8.webp";
+import Item9 from "./items/item9.webp";
 
 export const aboutDesc = {
   aboutBrief: `Nike, Inc. is an American multinational corporation that is engaged
