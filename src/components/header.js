@@ -1,8 +1,4 @@
-import React from "react";
-
 import Swing from "react-reveal/Swing";
-
-import "../scss/main.scss";
 
 const Header = () => (
   <header id="header-home">

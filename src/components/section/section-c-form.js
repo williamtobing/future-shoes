@@ -1,10 +1,7 @@
 import React from "react";
-
 import axios from "axios";
 import Select from "react-select";
 import Fade from "react-reveal/Fade";
-
-import "../../scss/main.scss";
 
 class SectionForm extends React.Component {
   constructor() {
@@ -106,9 +103,6 @@ class SectionForm extends React.Component {
           <Fade bottom>
             <h2 className="section-title">Try Our Product</h2>
             <div className="bottom-line"></div>
-            <p className="lead">Feel free to fill the form below</p>
-
-            {error && <h3 style={{ color: "red" }}>{error}</h3>}
           </Fade>
 
           <>
@@ -127,7 +121,7 @@ class SectionForm extends React.Component {
 
                 <div style={{ padding: "50px" }}>
                   <div className="Header">
-                    From: Tapanuli Utara To: {destination.label} Berat {weight}{" "}
+                    From: Tapanuli Utara To: {destination.label}, Berat {weight}{" "}
                     gram
                   </div>
                   <table id="customers">
@@ -170,6 +164,8 @@ class SectionForm extends React.Component {
               </Fade>
             ) : (
               <Fade bottom>
+                <p className="lead">Feel free to fill the form below</p>
+                {error && <h3 style={{ color: "red" }}>{error}</h3>}
                 <form onSubmit={this.handleSubmit}>
                   <div className="text-fields">
                     <input

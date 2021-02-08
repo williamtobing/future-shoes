@@ -1,8 +1,4 @@
-import React from "react";
-
 import Fade from "react-reveal/Fade";
-
-import "../../scss/main.scss";
 
 const SectionContactE = () => (
   <section id="contact-c" className="bg-main py-4">
